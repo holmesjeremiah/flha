@@ -4,6 +4,7 @@ import Nav from '../Components/Nav';
 import { GrFormView } from "react-icons/gr";
 import { CiFacebook, CiInstagram, CiShare2 } from "react-icons/ci";
 import { useParams } from 'react-router-dom';
+import Footer from '../Components/Footer';
 
 
 const Article = ({ params }) => {
@@ -97,9 +98,9 @@ const Article = ({ params }) => {
 
 
     return (
-        <div style={{ backgroundColor: '#1b3a59' }}>
+        <div style={{}}>
             <Nav />
-            <div className='text-light p-5'>
+            <div className=' p-5'>
                 <h2>{article.title}</h2>
                 {article.youtubeUrl ? (
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -153,6 +154,7 @@ const Article = ({ params }) => {
                 <div style={{ fontSize: '20px' }} dangerouslySetInnerHTML={{ __html: article.articleText }}></div>
                 <hr style={{ border: '2px solid #84B7D3' }} />
             </div>
+            <Footer />
         </div>
     );
 };

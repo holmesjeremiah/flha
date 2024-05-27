@@ -59,19 +59,10 @@ const BlogPreview = ({ articleCount }) => {
     }, []);
 
     return (
-        <div className='text-light' style={{ backgroundColor: '#1b3a59' }}>
+        <div className='' style={{ backgroundColor: 'white' }}>
             <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <h1 style={{ borderBottom: '2px solid #84B7D3' }}>FLHA Blog</h1>
-                <div className=' '>
+                <h1 style={{ color: 'black' }}>FLHA Blog</h1>
 
-                    <ul className="dropdown-menu" style={{ backgroundColor: 'black', color: 'white', border: '2px solid #84B7D3' }}>
-                        {['Latest', 'Hottest'].map((menuItem, index) => (
-
-                            <a key={index} class="dropdown-item " style={{ padding: '15px', color: 'white', fontWeight: 'bold' }} href='#' onClick={() => handleSortChange(menuItem)}><li>{menuItem}</li></a>
-
-                        ))}
-                    </ul>
-                </div>
             </div>
             {articles.length === 0 ? (
                 <p className='p-5'>No articles found.</p>

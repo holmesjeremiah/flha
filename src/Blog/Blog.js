@@ -6,6 +6,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 import ArticlePreview from './ArticlePreview';
 import Nav from '../Components/Nav';
+import Footer from '../Components/Footer';
 
 const Blog = ({ }) => {
     const [articles, setArticles] = useState([]);
@@ -61,12 +62,12 @@ const Blog = ({ }) => {
     return (
         <div >
             <Nav />
-            <div className='text-light' style={{ backgroundColor: '#1b3a59' }}>
+            <div className='' style={{}}>
                 <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <h1 style={{ borderBottom: '2px solid #84B7D3' }}>FLHA Blog</h1>
+                    <h1 style={{}}>FLHA Blog</h1>
                     <div className='fs-1 ' style={{ paddingLeft: '20px' }}>
 
-                        <a href="/auth/dashboard" style={{ textDecoration: 'none', color: 'white' }}>
+                        <a href="/auth/dashboard" style={{ textDecoration: 'none', color: 'black' }}>
 
                             <FaRegUserCircle />
                         </a>
@@ -88,6 +89,7 @@ const Blog = ({ }) => {
                     </section>
                 )}
             </div>
+            <Footer />
         </div>
     );
 };

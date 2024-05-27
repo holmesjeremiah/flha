@@ -21,10 +21,10 @@ function ArticlePreview({ articleInfo }) {
 
 
     return (
-        <div class="card" style={{ backgroundColor: '#1b3a59', border: '2px solid #D3D7DC', borderRadius: '25px' }}>
+        <div class="card" style={{ backgroundColor: '', border: '1px solid #D3D7DC', borderRadius: '10px' }}>
             {
                 articleInfo.image
-                && <img class="card-img-top" src={'https://api.jeremiah.business' + articleInfo.image} alt="Card image cap" style={{ height: '150px', objectFit: 'cover', borderBottom: '2px solid #84B7D3', borderRadius: '25px' }} />
+                && <img class="card-img-top" src={'https://api.jeremiah.business' + articleInfo.image} alt="Card image cap" style={{ height: '150px', objectFit: 'cover', borderBottom: '2px solid #84B7D3', borderRadius: '10px' }} />
             }
             {
                 articleInfo.youtubeUrl && (
@@ -42,20 +42,20 @@ function ArticlePreview({ articleInfo }) {
 
 
             <div class="card-body">
-                <h5 class="card-title text-light">{articleInfo.title}</h5>
+                <h5 class="card-title text-dark">{articleInfo.title}</h5>
                 <div className="d-flex flex-wrap mb-3 ">
                     {(articleInfo.tags ?? []).map((tag, index) => (
 
 
-                        <span key={index} className="badge bg-light text-dark me-1 mb-1">{tag}</span>
+                        <span key={index} style={{ backgroundColor: '#1b3a59' }} className="badge text-light me-1 mb-1">{tag}</span>
 
                     ))}
                 </div>
-                <div className="mb-1 text-light">{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')} | <GrFormView size={20} style={{ display: 'inline' }} />{articleInfo.views}</div>
+                <div className="mb-1 text-dark">{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')} | <GrFormView size={20} style={{ display: 'inline' }} />{articleInfo.views}</div>
 
                 <a href={"/blog/article/" + articleInfo._id.$oid}>
 
-                    <button style={{ backgroundColor: '#D3D7DC', color: '#1b3a59', padding: '10px 20px', borderRadius: '25px', fontSize: '15px' }}>View Article</button>
+                    <button style={{ backgroundColor: '#1b3a59', color: '#fff', padding: '10px 20px', borderRadius: '25px', fontSize: '15px' }}>View Article</button>
                 </a>
 
             </div>
