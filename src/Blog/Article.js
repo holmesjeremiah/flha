@@ -101,7 +101,10 @@ const Article = ({ params }) => {
         <div style={{}}>
             <Nav />
             <div className=' p-5'>
-                <h2>{article.title}</h2>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+                    <h2>{article.title}</h2>
+                </div>
                 {article.youtubeUrl ? (
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         {

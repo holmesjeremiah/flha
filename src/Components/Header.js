@@ -69,7 +69,10 @@ function Header() {
                             <br />
                             <br />
                         </p>
-                        <button style={{ backgroundColor: '#D3D7DC', padding: '15px 25px', borderRadius: '25px', fontSize: '20px' }}>About Us</button>
+                        <a href="/AboutUs">
+
+                            <button style={{ backgroundColor: '#D3D7DC', padding: '15px 25px', borderRadius: '25px', fontSize: '20px' }}>About Us</button>
+                        </a>
                     </div>
                 </div>
             </div>
