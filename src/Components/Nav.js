@@ -18,7 +18,7 @@ function Nav() {
                     <a href="/blog" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>
                         Blog
                     </a>
-                    <a href="#" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>
+                    <a href="/resources" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>
                         Resources
                     </a>
 

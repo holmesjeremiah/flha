@@ -9,6 +9,7 @@ import Article from './Blog/Article';
 import AboutUs from './AboutUs';
 import SafetyTips from './SafetyTips';
 import Register from './Auth/Register';
+import Resources from './Resources/Resources';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/AboutUs" element={<AboutUs />} />
         <Route exact path="/SafetyTips" element={<SafetyTips />} />
+        <Route exact path="/Resources" element={<Resources />} />
 
 
         <Route exact path="/auth/login" element={<Login />} />
