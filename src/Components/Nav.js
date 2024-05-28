@@ -24,7 +24,7 @@ function Nav() {
 
 
                     <a href="/SafetyTips" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>
-                        Saftey Tips
+                        Safety Tips
                     </a>
                     <a href="/AboutUs" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>
                         About Us

@@ -59,7 +59,7 @@ const BlogPreview = ({ articleCount }) => {
     }, []);
 
     return (
-        <div className='' style={{ backgroundColor: 'white' }}>
+        <div className='' style={{ backgroundColor: 'white', padding: '100px 0' }}>
             <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <h1 style={{ color: 'black' }}>FLHA Blog</h1>
 
@@ -77,6 +77,10 @@ const BlogPreview = ({ articleCount }) => {
                             ))}
                         </div>
                     </div>
+                    <a style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none', }} href="/AboutUs">
+
+                        <button style={{ backgroundColor: '#1b3a59', padding: '15px 25px', borderRadius: '25px', fontSize: '20px', color: '#fff' }}>View All</button>
+                    </a>
                 </section>
             )}
         </div>

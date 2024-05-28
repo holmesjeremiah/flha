@@ -1,9 +1,9 @@
 import React from 'react';
-//import vendors from './vendorData.js'
+import { FaWater, FaSatelliteDish, FaHome, FaCloud, FaLifeRing } from "react-icons/fa";
 import VendorList from './VendorList';
 import Nav from '../Components/Nav';
 import CompanyCard from './CompanyCard';
-import { FaWater } from "react-icons/fa";
+import Footer from '../Components/Footer';
 
 const Resources = () => {
     const companyInfoList = [
@@ -19,28 +19,28 @@ const Resources = () => {
             companyWebsite: 'www.hurricanewatchers.com',
             companyPhoneNumber: '(555) 123-4567',
             companyDescription: 'Offering real-time hurricane tracking and updates for preparedness and safety.',
-            icon: <FaWater size={'50px'} />
+            icon: <FaSatelliteDish size={'50px'} />
         },
         {
             companyName: 'Safe Haven Enterprises',
             companyWebsite: 'www.safehaven.com',
             companyPhoneNumber: '(888) 765-4321',
             companyDescription: 'Specializing in hurricane-resistant construction materials and shelter solutions.',
-            icon: <FaWater size={'50px'} />
+            icon: <FaHome size={'50px'} />
         },
         {
             companyName: 'WeatherGuard Technologies',
             companyWebsite: 'www.weatherguardtech.com',
             companyPhoneNumber: '(444) 222-3333',
             companyDescription: 'Developing cutting-edge weather monitoring tools and early warning systems for hurricanes.',
-            icon: <FaWater size={'50px'} />
+            icon: <FaCloud size={'50px'} />
         },
         {
             companyName: 'Rescue Ready Systems',
             companyWebsite: 'www.rescueready.com',
             companyPhoneNumber: '(333) 444-5555',
             companyDescription: 'Equipping first responders with the latest tools and information to efficiently manage hurricane emergencies.',
-            icon: <FaWater size={'50px'} />
+            icon: <FaLifeRing size={'50px'} />
         }
     ];
 
@@ -79,6 +79,7 @@ const Resources = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };

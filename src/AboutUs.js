@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 
 const AboutUs = () => {
     return (
@@ -29,6 +30,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };

@@ -8,6 +8,7 @@ import { CiSquarePlus, CiEdit } from "react-icons/ci";
 import { getCurrentUser, isLoggedIn, logout } from './Auth/Auth'; // Import necessary functions from '../Auth'
 import Nav from './Components/Nav';
 import axios from 'axios';
+import Footer from './Components/Footer';
 const Dashboard = () => {
     // Function to check if user is logged in
     function isLoggedIn() {
@@ -63,6 +64,7 @@ const Dashboard = () => {
                 </div>
 
             </div>
+            <Footer />
         </div>
     );
 };

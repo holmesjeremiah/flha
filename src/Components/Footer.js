@@ -8,7 +8,7 @@ function Footer() {
                     <a href="/blog" className='footer-link' style={{ color: 'black', textDecoration: 'none', padding: '10px', whiteSpace: 'nowrap' }}>
                         Blog
                     </a>
-                    <a href="#" className='footer-link' style={{ color: 'black', textDecoration: 'none', padding: '10px', whiteSpace: 'nowrap' }}>
+                    <a href="/resources" className='footer-link' style={{ color: 'black', textDecoration: 'none', padding: '10px', whiteSpace: 'nowrap' }}>
                         Resources
                     </a>
                     <a href="/SafetyTips" className='footer-link' style={{ color: 'black', textDecoration: 'none', padding: '10px', whiteSpace: 'nowrap' }}>
