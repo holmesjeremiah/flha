@@ -77,7 +77,7 @@ const BlogPreview = ({ articleCount }) => {
                             ))}
                         </div>
                     </div>
-                    <a style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none', }} href="/AboutUs">
+                    <a style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none', }} href="/blog">
 
                         <button style={{ backgroundColor: '#1b3a59', padding: '15px 25px', borderRadius: '25px', fontSize: '20px', color: '#fff' }}>View All</button>
                     </a>

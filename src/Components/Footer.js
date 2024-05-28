@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { isLoggedIn } from '../Auth/Auth.js';
 function Footer() {
     return (
         <footer className="footer" style={{ backgroundColor: '#D3D7DC', padding: '20px 0', textAlign: 'center' }}>
@@ -18,6 +18,9 @@ function Footer() {
                         About Us
                     </a>
                 </nav>
+                <a href="/auth/dashboard" style={{ color: 'black', textDecoration: 'none' }}>
+                    {isLoggedIn() ? 'Dashboard' : 'Login'}
+                </a>
                 <p style={{ margin: 0, color: 'black' }}>&copy; {new Date().getFullYear()} Frontline Hurricane Awareness</p>
             </div>
         </footer>

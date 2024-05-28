@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { helix } from 'ldrs'
+
 
 import { FaAngleDown } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -12,6 +14,9 @@ const Blog = ({ }) => {
     const [articles, setArticles] = useState([]);
     const [sortBy, setSortBy] = useState('Latest');
     const [searchQuery, setSearchQuery] = useState('');
+
+    helix.register()
+
 
     const fetchArticles = async () => {
         try {
@@ -74,7 +79,14 @@ const Blog = ({ }) => {
                     </div>
                 </div>
                 {articles.length === 0 ? (
-                    <p>No articles found.</p>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+                        <l-helix
+                            size="45"
+                            speed="2.5"
+                            color="black"
+                        ></l-helix>
+                    </div>
                 ) : (
                     <section className="section pb-0 text-light">
                         <div className="container">

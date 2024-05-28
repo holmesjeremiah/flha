@@ -32,7 +32,7 @@ function ArticlePreview({ articleInfo }) {
                         className="card-video-top"
                         src={`https://www.youtube.com/embed/${articleInfo.youtubeUrl}`}
                         title="YouTube video player"
-                        style={{ borderRadius: '25px', height: '150px', width: '100%', objectFit: 'cover', borderBottom: '2px solid #84B7D3' }}
+                        style={{ borderRadius: '10px', height: '150px', width: '100%', objectFit: 'cover', borderBottom: '2px solid #84B7D3' }}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
