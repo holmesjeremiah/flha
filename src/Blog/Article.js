@@ -98,65 +98,68 @@ const Article = ({ params }) => {
 
 
     return (
-        <div style={{}}>
+        <div >
             <Nav />
-            <div className=' p-5'>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-
-                    <h2>{article.title}</h2>
-                </div>
-                {article.youtubeUrl ? (
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className=' p-5' style={{ maxWidth: '1000px' }}>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        {
-                            article.youtubeUrl && (
-                                <iframe
-                                    title="YouTube video player"
-                                    className="img-fluid"
-                                    style={{ width: '100%', height: '400px', objectFit: 'cover', borderBottom: '2px solid #84B7D3' }}
-                                    src={`https://www.youtube.com/embed/${article.youtubeUrl}`}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            )
-                        }
-                    </div>
 
-                ) : (
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img
-                            src={'https://api.jeremiah.business' + article.image}
-                            alt="Article Image"
-                            className="img-fluid"
-                            style={{ borderBottom: '2px solid #84B7D3', margin: '25px', maxHeight: '500px' }}
-                        />
+                        <h2 style={{ textAlign: 'center' }}>{article.title}</h2>
                     </div>
-                )}
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    <p style={{ textAlign: 'center', fontSize: '20px', margin: '10px', maxWidth: '300px' }}>{article.description}</p>
-                    <div style={{ textAlign: 'center' }}>
-                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <CiShare2 size={'30px'} />
-                            Share
-                            <div style={{ backgroundColor: '', height: '50px', padding: '0 10px', borderRadius: '15px' }}>
-                                <a href='#' onClick={() => share(window.location.href)}><CiFacebook size={'50px'} color='white' /></a>
+                    {article.youtubeUrl ? (
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            {
+                                article.youtubeUrl && (
+                                    <iframe
+                                        title="YouTube video player"
+                                        className="img-fluid"
+                                        style={{ width: '100%', height: '400px', objectFit: 'cover', borderBottom: '2px solid #84B7D3' }}
+                                        src={`https://www.youtube.com/embed/${article.youtubeUrl}`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                )
+                            }
+                        </div>
+
+                    ) : (
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img
+                                src={'https://api.jeremiah.business' + article.image}
+                                alt="Article Image"
+                                className="img-fluid"
+                                style={{ borderBottom: '2px solid #84B7D3', margin: '25px', maxHeight: '500px' }}
+                            />
+                        </div>
+                    )}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <p style={{ textAlign: 'center', fontSize: '20px', margin: '10px', maxWidth: '300px' }}>{article.description}</p>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <CiShare2 size={'30px'} />
+                                Share
+                                <div style={{ backgroundColor: '', height: '50px', padding: '0 10px', borderRadius: '15px' }}>
+                                    <a href='#' onClick={() => share(window.location.href)}><CiFacebook size={'50px'} color='black' /></a>
+                                </div>
+                            </div>
+                            <p style={{ fontSize: '15px' }}>By:  @{article.publication.author}  <br /> {new Date(article.publication.date).toLocaleDateString('en-US')} {article.publication.time} <br /> <GrFormView size={20} />{article.views}</p>
+                            <div className="d-flex flex-wrap mb-3" style={{ justifyContent: 'center' }}>
+                                {(article.tags ?? []).map((tag, index) => (
+
+
+                                    <span key={index} className="badge bg-light text-dark me-1 mb-1">{tag}</span>
+
+                                ))}
                             </div>
                         </div>
-                        <p style={{ fontSize: '15px' }}>By:  {article.publication.author}  <br /> {new Date(article.publication.date).toLocaleDateString('en-US')} {article.publication.time} <br /> <GrFormView size={20} />{article.views}</p>
-                        <div className="d-flex flex-wrap mb-3" style={{ justifyContent: 'center' }}>
-                            {(article.tags ?? []).map((tag, index) => (
-
-
-                                <span key={index} className="badge bg-light text-dark me-1 mb-1">{tag}</span>
-
-                            ))}
-                        </div>
                     </div>
+                    <hr style={{ border: '2px solid #84B7D3' }} />
+                    <div style={{ fontSize: '20px' }} dangerouslySetInnerHTML={{ __html: article.articleText }}></div>
+                    <hr style={{ border: '2px solid #84B7D3' }} />
                 </div>
-                <hr style={{ border: '2px solid #84B7D3' }} />
-                <div style={{ fontSize: '20px' }} dangerouslySetInnerHTML={{ __html: article.articleText }}></div>
-                <hr style={{ border: '2px solid #84B7D3' }} />
             </div>
+
             <Footer />
         </div>
     );

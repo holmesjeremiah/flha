@@ -23,7 +23,7 @@ import Footer from '../Components/Footer';
 
 
 
-const CreateArticle = () => {
+const CreateMedia = () => {
     const [url, setUrl] = useState('');
     const [videoId, setVideoId] = useState('');
     const [imagePreview, setImagePreview] = useState(null);
@@ -31,17 +31,14 @@ const CreateArticle = () => {
     const [checked, setChecked] = useState(false);
 
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
-    const [articleInfo, setArticleInfo] = useState({
-        title: "",
-        description: "",
+    const [mediaInfo, setArticleInfo] = useState({
+        caption: "",
         publication: {
             author: getCurrentUser().username,
             date: new Date(),
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) // Set default time to current time
         },
-        articleText: '',
         image: null,
-        views: 0,
         tags: []
     });
     const [articlePublished, setArticlePublished] = useState(false);
@@ -69,14 +66,14 @@ const CreateArticle = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Basic validation
-        console.log(articleInfo);
-        if (!articleInfo.title || !articleInfo.description || !articleInfo.articleText || (!articleInfo.image && !videoId)) {
+        console.log(mediaInfo);
+        if (!mediaInfo.caption || (!mediaInfo.image && !videoId)) {
             alert("Please fill in all required fields");
             return;
         }
         try {
 
-            const response = await axios.post(process.env.REACT_APP_API_URL + 'articles', articleInfo, {
+            const response = await axios.post(process.env.REACT_APP_API_URL + 'media', mediaInfo, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -126,15 +123,7 @@ const CreateArticle = () => {
 
 
 
-    const onEditorStateChange = (newEditorState) => {
-        setEditorState(newEditorState);
-        const contentState = newEditorState.getCurrentContent();
-        const html = stateToHTML(contentState);
-        setArticleInfo(prevState => ({
-            ...prevState,
-            articleText: html
-        }));
-    };
+
 
     const handleDateChange = (dateString) => {
         const date = new Date(dateString);
@@ -203,7 +192,7 @@ const CreateArticle = () => {
         }
 
         // Check if the tag already exists
-        if (articleInfo.tags && articleInfo.tags.includes(tag)) {
+        if (mediaInfo.tags && mediaInfo.tags.includes(tag)) {
             // Tag already exists, no need to add it again
             setTag('');
             return;
@@ -222,7 +211,7 @@ const CreateArticle = () => {
 
 
         let newTags = [];
-        if (articleInfo.tags) newTags = [...articleInfo.tags];
+        if (mediaInfo.tags) newTags = [...mediaInfo.tags];
         newTags.push(tag);
 
         setArticleInfo(prevState => ({
@@ -290,14 +279,13 @@ const CreateArticle = () => {
                             <div>
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-                                    <h2>Create Blog Article</h2>
+                                    <h2>Create Media Post</h2>
 
 
                                 </div>
-
                                 <div className="mb-3">
-                                    <label className="form-label">Title:</label>
-                                    <input type="text" className="form-control bg-dark text-light" name="title" value={articleInfo.title} onChange={handleInputChange} />
+                                    <label className="form-label">Caption:</label>
+                                    <textarea className="form-control bg-dark text-light" name="caption" value={mediaInfo.caption} onChange={handleInputChange} />
                                 </div>
 
 
@@ -361,21 +349,7 @@ const CreateArticle = () => {
                                             )}
                                         </div>
                                 }
-                                <div className="mb-3 ">
-                                    <label className="form-label">Article Text:</label>
-                                    <div className='border border-white rounded-3'>
 
-                                        <Editor
-
-                                            editorState={editorState}
-                                            onEditorStateChange={onEditorStateChange}
-                                            wrapperClassName="wrapper-class"
-                                            editorClassName="editor-class bg-dark text-light"
-                                            toolbarClassName="toolbar-class"
-
-                                        />
-                                    </div>
-                                </div>
                                 <div className='mb-2 ' style={{ display: 'flex', gap: '25px', alignItems: 'end' }}>
                                     <div className=''>
                                         <label className="form-label">Tag:</label>
@@ -400,27 +374,24 @@ const CreateArticle = () => {
                                     </div>
                                 </div>
                                 <div className="d-flex flex-wrap mb-3">
-                                    {(articleInfo.tags ?? []).map((tag, index) => (
+                                    {(mediaInfo.tags ?? []).map((tag, index) => (
                                         <a key={index} onClick={() => removeTag(index)} href="#">
 
                                             <span key={index} className="badge bg-primary me-1 mb-1">{tag}</span>
                                         </a>
                                     ))}
                                 </div>
-                                <div className="mb-3">
-                                    <label className="form-label">Short Description:</label>
-                                    <textarea className="form-control bg-dark text-light" name="description" value={articleInfo.description} onChange={handleInputChange} />
-                                </div>
+
                                 <div className='row'>
                                     <div className="mb-3 col-4">
                                         <label className="form-label">Author:</label>
-                                        <input type="text" className="form-control bg-dark text-light" name="author" value={articleInfo.publication.author} onChange={e => handleInputChange({ target: { name: 'publication', value: { ...articleInfo.publication, author: e.target.value } } })} />
+                                        <input type="text" className="form-control bg-dark text-light" name="author" value={mediaInfo.publication.author} onChange={e => handleInputChange({ target: { name: 'publication', value: { ...mediaInfo.publication, author: e.target.value } } })} />
                                     </div>
                                     <div className="mb-3 col-6">
                                         <label className="form-label">Date:</label>
                                         <br />
                                         <DatePicker
-                                            selected={articleInfo.publication.date}
+                                            selected={mediaInfo.publication.date}
                                             onChange={handleDateChange}
                                             className="form-control bg-dark text-light"
                                         />
@@ -429,7 +400,7 @@ const CreateArticle = () => {
                                         <label className="form-label">Time:</label>
                                         <TimePicker
                                             onChange={handleTimeChange}
-                                            value={articleInfo.publication.time}
+                                            value={mediaInfo.publication.time}
                                             className="form-control bg-dark text-light"
                                             disableClock={true}
                                         />
@@ -445,4 +416,4 @@ const CreateArticle = () => {
     );
 };
 
-export default CreateArticle;
+export default CreateMedia;

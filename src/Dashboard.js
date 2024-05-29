@@ -9,6 +9,10 @@ import { getCurrentUser, isLoggedIn, logout } from './Auth/Auth'; // Import nece
 import Nav from './Components/Nav';
 import axios from 'axios';
 import Footer from './Components/Footer';
+import { MdOutlinePostAdd } from "react-icons/md";
+import { MdOutlineAddPhotoAlternate } from "react-icons/md";
+
+
 const Dashboard = () => {
     // Function to check if user is logged in
     function isLoggedIn() {
@@ -54,8 +58,17 @@ const Dashboard = () => {
                         user && user.level === 'admin' && // Check if user exists and is admin
 
                         <a href='/blog/create' className="col text-center " style={{ height: '200px', color: 'white', textDecoration: 'none' }}>
-                            <CiSquarePlus size={50} />
+                            <MdOutlinePostAdd size={50} />
                             <p>Create New Article</p>
+                        </a>
+
+                    }
+                    {
+                        user && user.level === 'admin' && // Check if user exists and is admin
+
+                        <a href='/media/create' className="col text-center " style={{ height: '200px', color: 'white', textDecoration: 'none' }}>
+                            <MdOutlineAddPhotoAlternate size={50} />
+                            <p>Create New Media Post</p>
                         </a>
 
                     }

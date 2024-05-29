@@ -10,6 +10,8 @@ import AboutUs from './AboutUs';
 import SafetyTips from './SafetyTips';
 import Register from './Auth/Register';
 import Resources from './Resources/Resources';
+import Media from './Media/Media';
+import CreateMedia from './Media/CreateMedia';
 
 const App = () => {
   return (
@@ -25,6 +27,9 @@ const App = () => {
 
         <Route exact path="/auth/login" element={<Login />} />
         <Route exact path="/auth/register" element={<Register />} />
+
+        <Route exact path="/media" element={<Media />} />
+        <Route exact path="/media/create" element={<CreateMedia />} />
 
         <Route exact path="/auth/dashboard" element={<Dashboard />} />
         <Route exact path="/blog/create" element={<CreateArticle />} />

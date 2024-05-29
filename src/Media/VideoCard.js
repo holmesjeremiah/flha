@@ -1,9 +1,10 @@
 import React from 'react';
 import { GrFormView } from "react-icons/gr";
 import { CiEdit } from "react-icons/ci";
+import Post from './Post';
 
 
-function ArticlePreview({ articleInfo }) {
+function VideoCard({ articleInfo }) {
     if (!articleInfo || Object.keys(articleInfo).length === 0) {
         return <div>Loading...</div>; // Render loading state if articleInfo is not available
     }
@@ -17,6 +18,15 @@ function ArticlePreview({ articleInfo }) {
             videoId = match ? match[1] : null;
         }
         return videoId;
+    }
+
+    function showDiague() {
+        const dialog = document.querySelector("dialog");
+        dialog.showModal();
+    }
+    function hideDiague() {
+        const dialog = document.querySelector("dialog");
+        dialog.close();
     }
 
 
@@ -43,6 +53,7 @@ function ArticlePreview({ articleInfo }) {
 
             <div class="card-body">
                 <h5 class="card-title text-dark">{articleInfo.title}</h5>
+
                 <div className="d-flex flex-wrap mb-3 ">
                     {(articleInfo.tags ?? []).map((tag, index) => (
 
@@ -51,17 +62,30 @@ function ArticlePreview({ articleInfo }) {
 
                     ))}
                 </div>
-                <div className="mb-1 text-dark">@{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')} | <GrFormView size={20} style={{ display: 'inline' }} />{articleInfo.views}</div>
+                <div className="mb-1 text-dark">@{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')}</div>
 
-                <a href={"/blog/article/" + articleInfo._id.$oid}>
+                <p class="card-title text-dark" style={{
+                    display: '-webkit-box',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: 3, // Number of lines to show
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
+                }}>{articleInfo.caption}</p>
 
-                    <button style={{ backgroundColor: '#1b3a59', color: '#fff', padding: '10px 20px', borderRadius: '25px', fontSize: '15px' }}>View Article</button>
+                <a onClick={() => showDiague()}>
+
+                    <button style={{ backgroundColor: '#1b3a59', color: '#fff', padding: '5px 10px', borderRadius: '25px', fontSize: '15px' }}>View More</button>
                 </a>
+                <dialog style={{ borderRadius: '10px ' }}>
+                    <div>
+                        <Post articleInfo={articleInfo} hideDiague={() => hideDiague()} />
 
+                    </div>
+                </dialog>
             </div>
         </div>
 
     );
 }
 
-export default ArticlePreview;
+export default VideoCard;

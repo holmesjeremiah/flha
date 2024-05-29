@@ -4,6 +4,17 @@ import Footer from './Components/Footer';
 
 const tips = [
     {
+        title: "Financial Preparedness for Hurricanes",
+        description: "Hurricanes can cause significant financial hardship. Take steps to safeguard your finances before a storm strikes:",
+        items: [
+            "Document your valuables. Take photos or videos of your belongings to simplify the insurance claim process.",
+            "Consider flood insurance. Standard homeowner's insurance may not cover flood damage. Obtain a separate flood insurance policy to protect your assets.",
+            "Have an emergency fund. Save money to cover unexpected expenses during and after a hurricane, such as temporary housing, repairs, or replacing lost belongings.",
+            "Back up important financial documents. Scan or photocopy critical documents like insurance policies, bank statements, and proof of ownership for safekeeping outside your home.",
+            "Contact your bank or credit card company after the storm. Report lost or damaged cards and inquire about assistance programs they may offer during disaster recovery."
+        ]
+    },
+    {
         title: "Before the Hurricane",
         description: "Preparation is key to minimizing the impact of a hurricane. Follow these tips to ensure you are ready:",
         items: [
@@ -16,6 +27,7 @@ const tips = [
             "Consider installing storm shutters or impact-resistant windows to protect your home from high winds and flying debris."
         ]
     },
+
     {
         title: "During the Hurricane",
         description: "Once the hurricane approaches, prioritize your safety and follow these guidelines:",
@@ -27,6 +39,17 @@ const tips = [
             "If flooding occurs, turn off electricity at the main breaker and evacuate to higher ground if necessary.",
             "Avoid using phones or electrical appliances, as they can conduct electricity if wet.",
             "Stay indoors until local authorities announce that it is safe to venture outside."
+        ]
+    },
+    {
+        title: "Staying Informed During a Hurricane",
+        description: "Reliable information is crucial during a hurricane. Here are ways to stay informed:",
+        items: [
+            "NOAA National Hurricane Center (https://www.nhc.noaa.gov/). The NHC is the official source for tracking and forecasting hurricanes in the Atlantic and Eastern Pacific Ocean.",
+            "Local weather service office. Stay tuned to local news and weather stations for updates specific to your area.",
+            "Emergency alert systems. Sign up for local emergency alert systems to receive warnings and instructions directly on your phone or other devices.",
+            "National Weather Service mobile app. Download the National Weather Service mobile app for convenient access to weather forecasts, watches, and warnings.",
+            "Social media. Follow reputable social media accounts of government agencies, emergency management services, and local news outlets for updates. Be cautious of rumors and unverified information."
         ]
     },
     {
@@ -44,28 +67,8 @@ const tips = [
             "Consider joining community cleanup efforts to help restore affected areas."
         ]
     },
-    {
-        title: "Financial Preparedness for Hurricanes",
-        description: "Hurricanes can cause significant financial hardship. Take steps to safeguard your finances before a storm strikes:",
-        items: [
-            "Document your valuables. Take photos or videos of your belongings to simplify the insurance claim process.",
-            "Consider flood insurance. Standard homeowner's insurance may not cover flood damage. Obtain a separate flood insurance policy to protect your assets.",
-            "Have an emergency fund. Save money to cover unexpected expenses during and after a hurricane, such as temporary housing, repairs, or replacing lost belongings.",
-            "Back up important financial documents. Scan or photocopy critical documents like insurance policies, bank statements, and proof of ownership for safekeeping outside your home.",
-            "Contact your bank or credit card company after the storm. Report lost or damaged cards and inquire about assistance programs they may offer during disaster recovery."
-        ]
-    },
-    {
-        title: "Staying Informed During a Hurricane",
-        description: "Reliable information is crucial during a hurricane. Here are ways to stay informed:",
-        items: [
-            "NOAA National Hurricane Center (https://www.nhc.noaa.gov/). The NHC is the official source for tracking and forecasting hurricanes in the Atlantic and Eastern Pacific Ocean.",
-            "Local weather service office. Stay tuned to local news and weather stations for updates specific to your area.",
-            "Emergency alert systems. Sign up for local emergency alert systems to receive warnings and instructions directly on your phone or other devices.",
-            "National Weather Service mobile app. Download the National Weather Service mobile app for convenient access to weather forecasts, watches, and warnings.",
-            "Social media. Follow reputable social media accounts of government agencies, emergency management services, and local news outlets for updates. Be cautious of rumors and unverified information."
-        ]
-    },
+
+
     {
         title: "Mental and Emotional Wellbeing After a Hurricane",
         description: "Hurricanes can be traumatic experiences. Here are some tips to take care of your mental and emotional wellbeing after a storm:",
@@ -81,31 +84,36 @@ const tips = [
 
 const SafetyTips = () => {
     return (
-        <div>
+        <div >
             <Nav />
-            <section id="safety-tips" className="py-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h2 className="text-center mb-4">Hurricane Safety Tips</h2>
-                            <p className="lead text-center">Stay Safe Before, During, and After a Hurricane</p>
-                            {tips.map((tip, index) => (
-                                <div className="card mb-4" key={index}>
-                                    <div className="card-body">
-                                        <h3 className="card-title">{tip.title}</h3>
-                                        <p>{tip.description}</p>
-                                        <ul>
-                                            {tip.items.map((item, itemIndex) => (
-                                                <li key={itemIndex}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <section id="safety-tips" className="py-5" style={{ width: '1000px' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2 className="text-center mb-4">Hurricane Safety Tips</h2>
+                                <p className="lead text-center">Stay Safe Before, During, and After a Hurricane</p>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '25px' }}>
+
+                                    {tips.map((tip, index) => (
+                                        <div className="card col-md-5 col-sm-12" key={index}>
+                                            <div className="card-body">
+                                                <h3 className="card-title">{tip.title}</h3>
+                                                <p>{tip.description}</p>
+                                                <ul>
+                                                    {tip.items.map((item, itemIndex) => (
+                                                        <li key={itemIndex}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <Footer />
         </div>
     );

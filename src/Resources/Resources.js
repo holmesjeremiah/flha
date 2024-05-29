@@ -47,13 +47,13 @@ const Resources = () => {
     return (
         <div>
             <Nav />
-            <section id="safety-tips" className="py-5">
-                <div className="container">
+            <section style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }} id="safety-tips" className="py-5">
+                <div className="container" style={{ maxWidth: '1000px' }}>
                     <div className="row">
                         <div className="col-md-12">
                             <h2 className="text-center mb-4">Resources</h2>
                             <p className="lead text-center">A Collection of Vendors, Suppliers, and Recommended Companies</p>
-                            <div className='row'>
+                            <div className='row' style={{ display: 'flex', justifyContent: 'center', }}>
                                 <div className='col-md-6'>
                                     <h3 className="mt-5 mb-3">Post-Hurricane Recovery</h3>
                                     <p>Find companies offering post-hurricane recovery services and supplies.</p>

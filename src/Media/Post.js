@@ -1,9 +1,19 @@
-import React from 'react';
+import { React, useState, useRef, useEffect } from 'react';
 import { GrFormView } from "react-icons/gr";
 import { CiEdit } from "react-icons/ci";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 
-function ArticlePreview({ articleInfo }) {
+
+function Post({ articleInfo, hideDiague }) {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const dialogRef = useRef(null);
+
+
+
+
+
+
     if (!articleInfo || Object.keys(articleInfo).length === 0) {
         return <div>Loading...</div>; // Render loading state if articleInfo is not available
     }
@@ -20,8 +30,10 @@ function ArticlePreview({ articleInfo }) {
     }
 
 
+
     return (
-        <div class="card" style={{ backgroundColor: '', border: '1px solid #D3D7DC', borderRadius: '10px' }}>
+        <div class="" style={{ backgroundColor: '', borderRadius: '10px', maxWidth: '500px' }} ref={dialogRef}>
+
             {
                 articleInfo.image
                 && <img class="card-img-top" src={'https://api.jeremiah.business' + articleInfo.image} alt="Card image cap" style={{ height: '150px', objectFit: 'cover', borderBottom: '2px solid #84B7D3', borderRadius: '10px' }} />
@@ -43,6 +55,7 @@ function ArticlePreview({ articleInfo }) {
 
             <div class="card-body">
                 <h5 class="card-title text-dark">{articleInfo.title}</h5>
+
                 <div className="d-flex flex-wrap mb-3 ">
                     {(articleInfo.tags ?? []).map((tag, index) => (
 
@@ -51,17 +64,20 @@ function ArticlePreview({ articleInfo }) {
 
                     ))}
                 </div>
-                <div className="mb-1 text-dark">@{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')} | <GrFormView size={20} style={{ display: 'inline' }} />{articleInfo.views}</div>
+                <div className="mb-1 text-dark">@{articleInfo.publication.author} | {new Date(articleInfo.publication.date).toLocaleDateString('en-US')}</div>
 
-                <a href={"/blog/article/" + articleInfo._id.$oid}>
+                <p class="card-title text-dark" style={{}}>{articleInfo.caption}</p>
 
-                    <button style={{ backgroundColor: '#1b3a59', color: '#fff', padding: '10px 20px', borderRadius: '25px', fontSize: '15px' }}>View Article</button>
-                </a>
+
 
             </div>
+            <a href='#' onClick={hideDiague} style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none' }}>
+                <IoCloseCircleOutline size={'75px'} style={{ margin: '20px' }} color='black' />
+
+            </a>
         </div>
 
     );
 }
 
-export default ArticlePreview;
+export default Post;
