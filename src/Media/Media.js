@@ -73,7 +73,7 @@ const Media = ({ }) => {
 
                 </div>
                 {medias.length === 0 ? (
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
 
                         <l-helix
                             size="45"

@@ -65,7 +65,14 @@ const BlogPreview = ({ articleCount }) => {
 
             </div>
             {articles.length === 0 ? (
-                <p className='p-5'>No articles found.</p>
+                <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
+
+                    <l-helix
+                        size="45"
+                        speed="2.5"
+                        color="black"
+                    ></l-helix>
+                </div>
             ) : (
                 <section className="section pb-0 text-light">
                     <div className="container">
