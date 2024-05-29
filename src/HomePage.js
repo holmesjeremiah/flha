@@ -7,12 +7,16 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogPreview from './Blog/BlogPreview';
 import Footer from './Components/Footer';
 import Resources from './Resources/Resources';
+import PostBanner from './PostBanner';
+import Banner from './Banner';
 
 
 function HomePage() {
     return (
         <div style={{ minHeight: '100vh' }}>
             <Nav />
+            <Banner />
+            <PostBanner />
             <Header />
 
             <BlogPreview articleCount={3} />
