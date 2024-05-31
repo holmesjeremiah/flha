@@ -1,4 +1,4 @@
-# Done With Dust
+# Frontline Hurricane Awareness
 
 ## About the Project
 
@@ -25,12 +25,12 @@ Before you begin, ensure you have the following installed on your local machine:
 ### Installation
 1. **Clone the Repository:**
    ```
-   git clone holmesjeremiah/done-with-dust
+   git clone holmesjeremiah/flha
    ```
 
 2. **Navigate to the Project Directory:**
    ```
-   cd done-with-dust
+   cd flha
    ```
 
 3. **Install Dependencies:**
