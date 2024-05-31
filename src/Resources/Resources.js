@@ -51,8 +51,8 @@ const Resources = () => {
                 <div className="container" style={{ maxWidth: '1000px' }}>
                     <div className="row">
                         <div className="col-md-12">
-                            <h2 className="text-center mb-4">Resources</h2>
-                            <p className="lead text-center">A Collection of Vendors, Suppliers, and Recommended Companies</p>
+                            <h2 className="text-center mb-4" style={{ fontSize: '60px' }}> Resources</h2>
+                            <p className="lead text-center" style={{ fontSize: '30px' }}>A Collection of Vendors, Suppliers, and Recommended Companies</p>
                             <div className='row' style={{ display: 'flex', justifyContent: 'center', }}>
                                 <div className='col-md-6'>
                                     <h3 className="mt-5 mb-3">Post-Hurricane Recovery</h3>

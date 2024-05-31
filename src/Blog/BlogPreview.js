@@ -61,7 +61,7 @@ const BlogPreview = ({ articleCount }) => {
     return (
         <div className='' style={{ backgroundColor: 'white', padding: '100px 0' }}>
             <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <h1 style={{ color: 'black' }}>FLHA Blog</h1>
+                <div style={{ color: 'black', fontSize: '60px', }}>FLHA Blog</div>
 
             </div>
             {articles.length === 0 ? (

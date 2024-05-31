@@ -232,9 +232,9 @@ const CreateMedia = () => {
 
 
     return (
-        <div className="" style={{ backgroundColor: '#1b3a59' }}>
+        <div className="" style={{}}>
             <Nav />
-            <form className="container text-light p-3" onSubmit={handleSubmit}>
+            <form className="container  p-5" onSubmit={handleSubmit}>
 
                 {
                     articlePublished ?
@@ -285,7 +285,7 @@ const CreateMedia = () => {
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Caption:</label>
-                                    <textarea className="form-control bg-dark text-light" name="caption" value={mediaInfo.caption} onChange={handleInputChange} />
+                                    <textarea className="form-control " name="caption" value={mediaInfo.caption} onChange={handleInputChange} />
                                 </div>
 
 
@@ -308,7 +308,7 @@ const CreateMedia = () => {
                                         <div>
                                             <div className="mb-3">
                                                 <label className="form-label">Image:</label>
-                                                <input type="file" accept="image/*" onChange={handleImageChange} className="form-control bg-dark text-light" />
+                                                <input type="file" accept="image/*" onChange={handleImageChange} className="form-control " />
                                             </div>
                                             {
                                                 imagePreview &&
@@ -324,7 +324,7 @@ const CreateMedia = () => {
                                             <div className='mb-3 input-group'>
 
                                                 <input
-                                                    className='form-control bg-dark text-light'
+                                                    className='form-control '
                                                     type="text"
                                                     value={url}
                                                     onChange={handleUrlChange}
@@ -350,12 +350,12 @@ const CreateMedia = () => {
                                         </div>
                                 }
 
-                                <div className='mb-2 ' style={{ display: 'flex', gap: '25px', alignItems: 'end' }}>
+                                <div className='mb-2 ' style={{ display: 'flex', gap: '25px', alignItems: 'end', justifyContent: 'center' }}>
                                     <div className=''>
                                         <label className="form-label">Tag:</label>
                                         <input
                                             type="text"
-                                            className="form-control bg-dark text-light"
+                                            className="form-control "
                                             name="tags"
                                             value={tag}
                                             onChange={handleTagsChange}
@@ -370,10 +370,10 @@ const CreateMedia = () => {
                                         </datalist>
                                     </div>
                                     <div className=''>
-                                        <button type="button" onClick={() => addTag()} className="btn btn-outline-light">Add Tag</button>
+                                        <button type="button" onClick={() => addTag()} className="btn btn-outline-dark">Add Tag</button>
                                     </div>
                                 </div>
-                                <div className="d-flex flex-wrap mb-3">
+                                <div className="d-flex flex-wrap mb-3 " style={{ display: 'flex', justifyContent: 'center' }}>
                                     {(mediaInfo.tags ?? []).map((tag, index) => (
                                         <a key={index} onClick={() => removeTag(index)} href="#">
 
@@ -382,10 +382,10 @@ const CreateMedia = () => {
                                     ))}
                                 </div>
 
-                                <div className='row'>
+                                <div style={{ display: 'flex', justifyContent: 'center' }} className='row'>
                                     <div className="mb-3 col-4">
                                         <label className="form-label">Author:</label>
-                                        <input type="text" className="form-control bg-dark text-light" name="author" value={mediaInfo.publication.author} onChange={e => handleInputChange({ target: { name: 'publication', value: { ...mediaInfo.publication, author: e.target.value } } })} />
+                                        <input type="text" className="form-control " name="author" value={mediaInfo.publication.author} onChange={e => handleInputChange({ target: { name: 'publication', value: { ...mediaInfo.publication, author: e.target.value } } })} />
                                     </div>
                                     <div className="mb-3 col-6">
                                         <label className="form-label">Date:</label>
@@ -393,20 +393,26 @@ const CreateMedia = () => {
                                         <DatePicker
                                             selected={mediaInfo.publication.date}
                                             onChange={handleDateChange}
-                                            className="form-control bg-dark text-light"
+                                            className="form-control "
                                         />
                                     </div>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+
                                     <div className="mb-3 col-6">
                                         <label className="form-label">Time:</label>
                                         <TimePicker
                                             onChange={handleTimeChange}
                                             value={mediaInfo.publication.time}
-                                            className="form-control bg-dark text-light"
+                                            className="form-control "
                                             disableClock={true}
                                         />
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-outline-light">Submit</button>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <button type="submit" className="btn btn-outline-dark">Submit</button>
+
+                                </div>
                             </div>
                         )
                 }

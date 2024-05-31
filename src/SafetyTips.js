@@ -91,8 +91,8 @@ const SafetyTips = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h2 className="text-center mb-4">Hurricane Safety Tips</h2>
-                                <p className="lead text-center">Stay Safe Before, During, and After a Hurricane</p>
+                                <div className="text-center mb-4" style={{ fontSize: '60px' }}>Hurricane Safety Tips</div>
+                                <p style={{ fontSize: '30px' }} className="lead text-center">Stay Safe Before, During, and After a Hurricane</p>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '25px' }}>
 
                                     {tips.map((tip, index) => (

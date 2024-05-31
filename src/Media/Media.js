@@ -69,7 +69,7 @@ const Media = ({ }) => {
             <Nav />
             <div className='' style={{}}>
                 <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <h1 style={{}}>Media</h1>
+                    <div style={{ fontSize: '60px' }}>Media</div>
 
                 </div>
                 {medias.length === 0 ? (

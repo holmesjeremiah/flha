@@ -27,16 +27,16 @@ const Banner = () => {
     return (
         <div
             id="home"
-            className="vh-100"
+            className=""
             style={{
                 backgroundImage: `url(${orientationHorizontal ? horizontalCover : verticalCover})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-
+                padding: '10vh 0'
 
             }}
         >
-            <div className="container-fluid h-100">
+            <div className="container-fluid">
                 <div className="row justify-content-center align-items-center h-100">
                     <div className="col-10 col-md-5 text-center">
                         <img
@@ -47,8 +47,8 @@ const Banner = () => {
                         />
                     </div>
                     <div className="col-12 col-md-5 text-center">
-                        <h1 style={{ color: 'black', fontSize: '2.5em' }}>Frontline Hurricane Awareness</h1>
-                        <h4 style={{ color: 'black' }}>Empowering Communities, Safeguarding Lives</h4>
+                        <h1 style={{ color: 'black', fontSize: '60px', }}>Frontline Hurricane Awareness</h1>
+                        <h4 style={{ fontSize: '30px', color: 'black', fontWeight: 'bold' }}>Empowering Communities, Safeguarding Lives</h4>
                         <br />
                         <p style={{ color: 'black' }}>
                             Welcome to Frontline Hurricane Awareness! Our mission is to empower communities with the knowledge and resources needed for hurricane preparedness, safety, and recovery. Join us to stay informed and protect your community.

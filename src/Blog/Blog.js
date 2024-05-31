@@ -69,14 +69,8 @@ const Blog = ({ }) => {
             <Nav />
             <div className='' style={{}}>
                 <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <h1 style={{}}>FLHA Blog</h1>
-                    <div className='fs-1 ' style={{ paddingLeft: '20px' }}>
+                    <div style={{ fontSize: '60px', textAlign: 'center' }}>FLHA Blog</div>
 
-                        <a href="/auth/dashboard" style={{ textDecoration: 'none', color: 'black' }}>
-
-                            <FaRegUserCircle />
-                        </a>
-                    </div>
                 </div>
                 {articles.length === 0 ? (
                     <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
