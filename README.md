@@ -4,7 +4,7 @@
 
 This is a web application for a company that provides hurricane awareness related information.  The website is built using ReactJS and Bootstrap CSS for the front end and MongoDB for the database storage.
 
-[Visit Website](https://flha.avacan.com)
+[Visit Website](https://flha.avacan.net)
 
 ## Features
 
