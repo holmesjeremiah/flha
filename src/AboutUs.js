@@ -10,8 +10,8 @@ const AboutUs = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h2 className="text-center mb-4">About Us</h2>
-                            <p className="lead text-center">Empowering Communities for Hurricane Preparedness</p>
+                            <h2 className="text-center mb-4" style={{ fontSize: '60px' }}>About Us</h2>
+                            <p className="lead text-center" style={{ fontSize: '30px' }}>Empowering Communities for Hurricane Preparedness</p>
                             <p>The primary objective of Frontline Hurricane Awareness is to educate and inform individuals about hurricane safety measures, preparedness, and response strategies. We are committed to empowering communities with the knowledge and resources needed to mitigate the impact of hurricanes and protect lives and property.</p>
                             <h3 className="mt-5 mb-3">Our Mission</h3>
                             <p>Our mission is to empower communities with the knowledge and resources needed to mitigate the impact of hurricanes and protect lives and property.</p>

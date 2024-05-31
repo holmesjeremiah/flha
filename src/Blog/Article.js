@@ -64,37 +64,12 @@ const Article = ({ params }) => {
 
     };
 
-    // Function to update or create meta tag
-    const updateMetaTag = (property, attribute, value) => {
-        // Select the meta tag with the given property
-        const metaTag = document.querySelector(`meta[property="${property}"]`);
 
-        // If the meta tag exists, update its attribute
-        if (metaTag) {
-            metaTag.setAttribute(attribute, value);
-        } else {
-            // If the meta tag doesn't exist, create it
-            const newMetaTag = document.createElement('meta');
-            newMetaTag.setAttribute('property', property);
-            newMetaTag.setAttribute(attribute, value);
-            document.head.appendChild(newMetaTag);
-        }
-    };
 
     if (!article || Object.keys(article).length === 0) {
         return <div>Loading...</div>;
     }
-    function getYouTubeVideoId(url) {
-        let videoId;
-        if (url.includes('youtu.be')) {
-            const match = url.match(/youtu\.be\/([^&?/]+)/);
-            videoId = match ? match[1] : null;
-        } else {
-            const match = url.match(/[?&]v=([^&]+)/);
-            videoId = match ? match[1] : null;
-        }
-        return videoId;
-    }
+
 
 
     return (

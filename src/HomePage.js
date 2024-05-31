@@ -1,14 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './Components/Nav';
+import Banner from './Banner';
 import Header from './Components/Header';
-import Blog from './Blog/Blog';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogPreview from './Blog/BlogPreview';
 import Footer from './Components/Footer';
-import Resources from './Resources/Resources';
-import PostBanner from './PostBanner';
-import Banner from './Banner';
+import PostBanner from './Media/MediaPreview';
 
 
 function HomePage() {
@@ -18,9 +15,7 @@ function HomePage() {
             <Banner />
             <PostBanner />
             <Header />
-
             <BlogPreview articleCount={3} />
-
             <Footer />
         </div>
     );

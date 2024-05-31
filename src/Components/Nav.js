@@ -12,7 +12,7 @@ function Nav() {
             <div className='row' style={{ margin: '0 auto' }}>
                 <a className='col-sm-12 col-md-5' href="/" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
                     <img className='' src={logo} alt="logo" style={{ maxWidth: "6em", borderRadius: '50%' }} />
-                    <h1 className='' style={{ fontSize: '25px' }}>Frontline Hurricane Awareness</h1>
+                    <h1 className='' style={{ fontSize: '25px', textAlign: 'center' }}>Frontline Hurricane Awareness</h1>
                 </a>
                 <div className='col-sm-12 col-md-7' style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', fontSize: '20px', backgroundColor: '#D3D7DC', flexWrap: 'wrap' }} >
                     <a href="/blog" className=' link-offset-3 text-center align-middle' style={{ color: 'black', textDecoration: 'none', whiteSpace: 'nowrap', padding: '10px' }}>

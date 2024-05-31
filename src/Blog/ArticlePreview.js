@@ -1,23 +1,13 @@
 import React from 'react';
 import { GrFormView } from "react-icons/gr";
-import { CiEdit } from "react-icons/ci";
+
 
 
 function ArticlePreview({ articleInfo }) {
     if (!articleInfo || Object.keys(articleInfo).length === 0) {
         return <div>Loading...</div>; // Render loading state if articleInfo is not available
     }
-    function getYouTubeVideoId(url) {
-        let videoId;
-        if (url.includes('youtu.be')) {
-            const match = url.match(/youtu\.be\/([^&?/]+)/);
-            videoId = match ? match[1] : null;
-        } else {
-            const match = url.match(/[?&]v=([^&]+)/);
-            videoId = match ? match[1] : null;
-        }
-        return videoId;
-    }
+
 
 
     return (

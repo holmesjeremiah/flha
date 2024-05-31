@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Done With Dust
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the Project
 
-## Available Scripts
+This is a web application for a company that provides hurricane awareness related information.  The website is built using ReactJS and Bootstrap CSS for the front end and MongoDB for the database storage.
 
-In the project directory, you can run:
+[Visit Website](https://flha.avacan.com)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Responsive navbar
+- Blog
+- The ability to post short 'Instagram-like' content posts
+- CRUD Operations for Blog articles and Media posts
+- About Us page with extended bio
+- Mutable Resources and Safety Tips sections
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+Before you begin, ensure you have the following installed on your local machine:
+- Node.js: Make sure you have Node.js installed. You can download and install it from [here](https://nodejs.org/).
 
-### `npm run build`
+### Installation
+1. **Clone the Repository:**
+   ```
+   git clone holmesjeremiah/done-with-dust
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Navigate to the Project Directory:**
+   ```
+   cd done-with-dust
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Install Dependencies:**
+   ```
+   npm install
+   ```
+   This command will install all the necessary dependencies for the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Run the Development Server:**
+   ```
+   npm start
+   ```
+   This command will start the development server and open your default web browser to preview the website. If it doesn't open automatically, you can visit `http://localhost:3000` in your browser.
 
-### `npm run eject`
+5. **Hand Instructions (Optional):**
+   If you encounter any issues during the installation process or while running the project, feel free to reach out to us for assistance. Our team is available to provide guidance and support to ensure a smooth experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
+Once the development server is running, you can interact with the website locally. Explore the various features and functionalities to get a feel for how it works.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
+We welcome contributions from the community! If you're interested in contributing to the project, please follow these steps:
+1. Fork the repository on GitHub.
+2. Make your changes in a new branch.
+3. Submit a pull request with your changes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional Notes
+- For more detailed information about the project structure, scripts, and available commands, refer to the project's documentation or README file.

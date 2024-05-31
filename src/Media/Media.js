@@ -8,7 +8,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
-import VideoCard from './VideoCard';
+import MediaCard from './MediaCard';
 
 const Media = ({ }) => {
     const [medias, setMedias] = useState([]);
@@ -21,10 +21,12 @@ const Media = ({ }) => {
     const fetchArticles = async () => {
         try {
             const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
-            let media = response.data.objects;
+            let media = sortArticles('Latest', response.data.objects);
             //if (filterBy) {
             //  medias = filterArticles(filterBy, medias)
             //}
+
+
 
             setMedias(media);
 
@@ -87,7 +89,7 @@ const Media = ({ }) => {
                             <div className="row">
                                 {medias.map((article, key) => (
                                     <div className="col-lg-4 mb-5" key={article.id}>
-                                        <VideoCard articleInfo={article} />
+                                        <MediaCard articleInfo={article} />
                                     </div>
                                 ))}
                             </div>

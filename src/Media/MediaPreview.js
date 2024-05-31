@@ -1,31 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
-import { GrFormView } from "react-icons/gr";
-import { getCurrentUser } from './Auth/Auth';
-import { CiEdit } from "react-icons/ci";
-import axios, { all } from 'axios';
+
+import axios from 'axios';
 
 import { IoArrowBackCircleSharp, IoArrowForwardCircleSharp } from "react-icons/io5";
 
 
 
-const PostBanner = () => {
-    const [orientationHorizontal, setOrientationHorizontal] = useState(false);
-    const [show, setShow] = useState(false);
-    const [articleInfo, setArticleInfo] = useState({});
+const MediaPreview = () => {
+
     const [currentPost, setCurrentPost] = useState(0);
     const [allPosts, setAllPosts] = useState([]);
-    const handleClose = () => setShow(false);
-    const handleShow = (e) => {
-        e.preventDefault();
-        setShow(true);
-    };
     const nextPost = () => {
         if (currentPost === 0) {
             return;
 
         }
         setCurrentPost(currentPost - 1)
+    };
+    const sortArticles = (medias) => {
+        const sortedArticles = [...medias].sort((a, b) => new Date(b.publication.date) - new Date(a.publication.date));
+        return sortedArticles;
     };
     const previousPost = () => {
         if (allPosts.length === currentPost + 1) {
@@ -38,28 +33,18 @@ const PostBanner = () => {
         try {
             const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
             let media = response.data.objects;
-            //if (filterBy) {
-            //  medias = filterArticles(filterBy, medias)
-            //}
-            setAllPosts(media);
 
-            console.log(media);
+            setAllPosts(sortArticles(media));
+
         } catch (error) {
             console.error('Error fetching medias:', error);
-            // Handle error gracefully
+
         }
     };
 
     useEffect(() => {
         fetchPosts();
-        const handleResize = () => {
-            setOrientationHorizontal(window.innerWidth >= 800);
-        };
 
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     // Render loading state if articleInfo is not available
@@ -69,7 +54,7 @@ const PostBanner = () => {
     return (
         <div style={{ padding: '50px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ fontSize: '60px' }}>FLHA News</div>
+                <div style={{ fontSize: '60px', textAlign: 'center' }}>FLHA News</div>
 
             </div>
             <div
@@ -118,7 +103,7 @@ const PostBanner = () => {
 
                                 <p>
                                     <h1 className="display-4 font-italic">{allPosts[currentPost].title}</h1>
-                                    <div className="mb-1 text-dark">{allPosts[currentPost].publication.author} | {new Date(allPosts[currentPost].publication.date).toLocaleDateString('en-US')} | <GrFormView size={20} style={{ display: 'inline' }} />{allPosts[currentPost].views}</div>
+                                    <div className="mb-1 text-dark">{allPosts[currentPost].publication.author} | {new Date(allPosts[currentPost].publication.date).toLocaleDateString('en-US')}</div>
                                     <div className="d-flex flex-wrap  " style={{ justifyContent: 'center' }}>
                                         {(allPosts[currentPost].tags ?? []).map((tag, index) => (
 
@@ -158,4 +143,4 @@ const PostBanner = () => {
     );
 };
 
-export default PostBanner;
+export default MediaPreview;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaWater, FaSatelliteDish, FaHome, FaCloud, FaLifeRing } from "react-icons/fa";
-import VendorList from './VendorList';
 import Nav from '../Components/Nav';
 import CompanyCard from './CompanyCard';
 import Footer from '../Components/Footer';

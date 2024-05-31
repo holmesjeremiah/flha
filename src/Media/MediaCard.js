@@ -1,32 +1,10 @@
 import React from 'react';
-import { GrFormView } from "react-icons/gr";
-import { CiEdit } from "react-icons/ci";
-import Post from './Post';
 
 
-function VideoCard({ articleInfo }) {
+
+function MediaCard({ articleInfo }) {
     if (!articleInfo || Object.keys(articleInfo).length === 0) {
         return <div>Loading...</div>; // Render loading state if articleInfo is not available
-    }
-    function getYouTubeVideoId(url) {
-        let videoId;
-        if (url.includes('youtu.be')) {
-            const match = url.match(/youtu\.be\/([^&?/]+)/);
-            videoId = match ? match[1] : null;
-        } else {
-            const match = url.match(/[?&]v=([^&]+)/);
-            videoId = match ? match[1] : null;
-        }
-        return videoId;
-    }
-
-    function showDiague() {
-        const dialog = document.querySelector("dialog");
-        dialog.showModal();
-    }
-    function hideDiague() {
-        const dialog = document.querySelector("dialog");
-        dialog.close();
     }
 
 
@@ -74,4 +52,4 @@ function VideoCard({ articleInfo }) {
     );
 }
 
-export default VideoCard;
+export default MediaCard;
