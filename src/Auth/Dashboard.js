@@ -1,14 +1,10 @@
 
 import React from 'react';
-import { FaHome, FaUser, FaChartBar, FaCog } from 'react-icons/fa'; // Importing icons from react-icons library
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS
-import { GrChapterAdd } from "react-icons/gr";
-import { CiSquarePlus, CiEdit } from "react-icons/ci";
 
-import { getCurrentUser, isLoggedIn, logout } from './Auth/Auth'; // Import necessary functions from '../Auth'
-import Nav from './Components/Nav';
-import axios from 'axios';
-import Footer from './Components/Footer';
+import { logout } from './Auth'; // Import necessary functions from '../Auth'
+import Nav from '../Components/Nav';
+import Footer from '../Components/Footer';
 import { MdOutlinePostAdd } from "react-icons/md";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 
@@ -40,7 +36,7 @@ const Dashboard = () => {
     return (
         <div>
             <Nav />
-            <div className='text-light px-2 container-fluid' style={{ minHeight: '80vh', backgroundColor: '#1b3a59', }}>
+            <div className=' px-2 container-fluid' style={{ minHeight: '80vh', }}>
 
                 <div className='p-5 ' style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', justifyItems: 'center' }}>
                     <div className=''>
@@ -48,7 +44,7 @@ const Dashboard = () => {
                     </div>
                     <div className=''>
                         {user && user.username} {/* Check if user exists before accessing username */}
-                        <button type="button" onClick={() => logout()} className="btn btn-outline-light btn-block mx-3">Logout</button>
+                        <button type="button" onClick={() => logout()} className="btn btn-outline-dark btn-block mx-3">Logout</button>
                     </div>
 
                 </div>
@@ -57,7 +53,7 @@ const Dashboard = () => {
                     {
                         user && user.level === 'admin' && // Check if user exists and is admin
 
-                        <a href='/blog/create' className="col text-center " style={{ height: '200px', color: 'white', textDecoration: 'none' }}>
+                        <a href='/blog/create' className="col text-center " style={{ height: '200px', color: 'black', textDecoration: 'none' }}>
                             <MdOutlinePostAdd size={50} />
                             <p>Create New Article</p>
                         </a>
@@ -66,9 +62,18 @@ const Dashboard = () => {
                     {
                         user && user.level === 'admin' && // Check if user exists and is admin
 
-                        <a href='/media/create' className="col text-center " style={{ height: '200px', color: 'white', textDecoration: 'none' }}>
+                        <a href='/media/create' className="col text-center " style={{ height: '200px', color: 'black', textDecoration: 'none' }}>
                             <MdOutlineAddPhotoAlternate size={50} />
                             <p>Create New Media Post</p>
+                        </a>
+
+                    }
+                    {
+                        user && user.level === 'admin' && // Check if user exists and is admin
+
+                        <a href='/auth/usermanagement' className="col text-center " style={{ height: '200px', color: 'black', textDecoration: 'none' }}>
+                            <MdOutlineAddPhotoAlternate size={50} />
+                            <p>User Management</p>
                         </a>
 
                     }

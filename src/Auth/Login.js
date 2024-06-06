@@ -23,7 +23,7 @@ class Login extends Component {
         return (
             <div>
                 <Nav />
-                <div className="d-flex justify-content-center align-items-center text-light" style={{ minHeight: '80vh', backgroundColor: '#1b3a59' }}>
+                <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh', }}>
                     <form className="border p-4 rounded" style={{ width: '300px' }} onSubmit={this.handleSubmit}>
                         <h2 className="text-center mb-4">Login</h2>
                         <div className="form-group">
@@ -53,7 +53,7 @@ class Login extends Component {
                         <button type="submit" className="btn btn-primary btn-block ">Login</button>
                         <br />
                         <br />
-                        <p>Do not have an account? </p>
+                        <p>Need an account? </p>
                         <button type="button" onClick={() => window.location.href = '/Auth/register'} className="btn btn-primary btn-block ">Register</button>
                     </form>
                 </div>

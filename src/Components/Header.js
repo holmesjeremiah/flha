@@ -1,8 +1,4 @@
 import React from 'react';
-import { IoMdClose } from 'react-icons/io';
-import { TiThMenu } from 'react-icons/ti';
-import { CiInstagram, CiFacebook, CiYoutube } from 'react-icons/ci';
-import { PiTiktokLogo } from 'react-icons/pi';
 import cover from '../cover.mp4';
 
 

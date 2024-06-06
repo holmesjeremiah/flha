@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertFromHTML, ContentState } from 'draft-js';
+import { EditorState, } from 'draft-js';
 import { stateToHTML } from 'draft-js-export-html';
 import DatePicker from 'react-datepicker'; // Import the date picker component
 import TimePicker from 'react-time-picker'; // Import the time picker component
@@ -14,11 +14,7 @@ import { getCurrentUser } from '../Auth/Auth';
 
 import { GrFormView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
-import { FaMagic } from "react-icons/fa";
 
-import { LuArrowDownLeftFromCircle } from "react-icons/lu";
-
-import { chaoticOrbit } from 'ldrs';
 import Footer from '../Components/Footer';
 
 
@@ -48,11 +44,6 @@ const CreateArticle = () => {
     const [articleId, setArticleId] = useState(null);
     const [tag, setTag] = useState('');
     const [filteredOptions, setFilteredOptions] = useState([]);
-    const [waiting, setWaiting] = useState(false);
-
-    const [assistant, setAssistant] = useState(null);
-    const [thread, setThread] = useState(null);
-    const [openai, setOpenai] = useState(null);
 
 
     const handleInputChange = (e) => {
@@ -213,7 +204,7 @@ const CreateArticle = () => {
         console.log(tags.data.objects);
         if (!tags.data.objects.some(item => item.tag === tag)) {
 
-            const response = await axios.post(process.env.REACT_APP_API_URL + 'tags', { 'tag': tag }, {
+            await axios.post(process.env.REACT_APP_API_URL + 'tags', { 'tag': tag }, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

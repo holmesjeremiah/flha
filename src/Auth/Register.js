@@ -31,7 +31,7 @@ class Register extends Component {
 
             <div>
                 <Nav />
-                <div className="d-flex justify-content-center align-items-center text-light" style={{ minHeight: '80vh', backgroundColor: '#1b3a59' }}>
+                <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh', }}>
                     <form className="border p-4 rounded" style={{ width: '300px' }} onSubmit={this.handleSubmit}>
                         <h2 className="text-center mb-4">Register</h2>
                         <div className="form-group">
