@@ -59,7 +59,7 @@ const BlogPreview = ({ articleCount }) => {
     }, []);
 
     return (
-        <div className='' style={{ backgroundColor: 'white', padding: '100px 0' }}>
+        <div className='' style={{ padding: '100px 0' }}>
             <div style={{ padding: '25px 50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ color: 'black', fontSize: '60px', textAlign: 'center' }}>FLHA Blog</div>
 

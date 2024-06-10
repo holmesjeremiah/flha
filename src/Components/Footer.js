@@ -2,7 +2,7 @@ import React from 'react';
 import { isLoggedIn } from '../Auth/Auth.js';
 function Footer() {
     return (
-        <footer className="footer" style={{ backgroundColor: '#D3D7DC', padding: '20px 0', textAlign: 'center' }}>
+        <footer className="footer" style={{ backgroundColor: '#D2D9DA', padding: '20px 0', textAlign: 'center' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                 <nav className="footer-nav" style={{ marginBottom: '10px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="/blog" className='footer-link' style={{ color: 'black', textDecoration: 'none', padding: '10px', whiteSpace: 'nowrap' }}>

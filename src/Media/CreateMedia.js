@@ -229,6 +229,40 @@ const CreateMedia = () => {
     };
 
 
+    const postToInstagram = async ()  => {
+        /*
+        const formData = new FormData();
+        formData.append('image', image);
+        formData.append('caption', caption);
+        formData.append('access_token', process.env.REACT_APP_META_ACCESS_TOKEN);
+        try {
+            // Step 1: Upload image to Instagram
+            const uploadResponse = await axios.post(
+              `https://graph.facebook.com/v13.0/${instagramAccountId}/media`,
+              formData
+            );
+      
+            const creationId = uploadResponse.data.id;
+      
+            // Step 2: Publish the media object
+            const publishResponse = await axios.post(
+              `https://graph.facebook.com/v13.0/${instagramAccountId}/media_publish`,
+              {
+                creation_id: creationId,
+                access_token: accessToken,
+              }
+            );
+      
+            alert('Post published successfully!');
+          } catch (error) {
+            console.error('Error posting to Instagram', error);
+            alert('Error posting to Instagram');
+          }
+            */
+      
+    }
+
+
 
 
     return (
