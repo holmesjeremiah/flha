@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { login } from './Auth';
 import Nav from '../Components/Nav';
+import Footer from '../Components/Footer';
 
 class Login extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class Login extends Component {
             <div>
                 <Nav />
                 <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh', }}>
-                    <form className="border p-4 rounded" style={{ width: '300px' }} onSubmit={this.handleSubmit}>
+                    <form className="border p-4 rounded" style={{ width: '300px', backgroundColor: 'white' }} onSubmit={this.handleSubmit}>
                         <h2 className="text-center mb-4">Login</h2>
                         <div className="form-group">
                             <label>Phone Number</label>
@@ -57,6 +58,7 @@ class Login extends Component {
                         <button type="button" onClick={() => window.location.href = '/Auth/register'} className="btn btn-primary btn-block ">Register</button>
                     </form>
                 </div>
+                <Footer />
             </div>
         );
     }

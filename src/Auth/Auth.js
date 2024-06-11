@@ -62,7 +62,7 @@ export async function register(username, phone, password) {
         localStorage.setItem('user', JSON.stringify(response.data.user));
 
         // Perform actions on success
-        window.location.href = '/dashboard';
+        window.location.href = '/auth/dashboard';
 
 
         // Return response data

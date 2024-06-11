@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { register } from './Auth';
 import Nav from '../Components/Nav';
+import Footer from '../Components/Footer';
 class Register extends Component {
     constructor(props) {
         super(props);
@@ -32,7 +33,7 @@ class Register extends Component {
             <div>
                 <Nav />
                 <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh', }}>
-                    <form className="border p-4 rounded" style={{ width: '300px' }} onSubmit={this.handleSubmit}>
+                    <form className="border p-4 rounded" style={{ width: '300px', backgroundColor: 'white' }} onSubmit={this.handleSubmit}>
                         <h2 className="text-center mb-4">Register</h2>
                         <div className="form-group">
                             <label>Username</label>
@@ -92,6 +93,7 @@ class Register extends Component {
                         <button type="button" onClick={() => window.location.href = '/auth/login'} className="btn btn-primary btn-block">Login</button>
                     </form>
                 </div>
+                <Footer />
             </div>
         );
     }

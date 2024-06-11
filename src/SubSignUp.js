@@ -31,11 +31,11 @@ const SubSignUp = () => {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className='row' style={{ maxWidth: '1000px', backgroundColor: '#81D8EE', padding: '25px', borderRadius: '10px 10px  0 0' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '1000px', overflow: 'hidden', borderRadius: '10px 10px  0 0', margin: '0 auto' }}>
+            <div className='row' style={{ backgroundColor: '#81D8EE', padding: '25px', }}>
                 <div className="col-sm-12 col-md-7 mb-3">
                     <div style={{ fontSize: '30px', textAlign: 'center' }}>Stay Informed with <strong>Hurricane Updates</strong>!</div>
-                    <div style={{ fontSize: '15px', textAlign: 'center' }}>Stay informed with the latest news and alerts sent straight to your phone! By signing up, you'll receive real-time text message updates about upcoming hurricanes, evacuation notices, safety tips, and emergency resources. Don't miss out on critical information – stay safe and prepared!</div>
+                    <div style={{ fontSize: '15px', textAlign: 'center' }}>Get the latest news and alerts sent straight to your phone! By signing up, you'll receive real-time text message updates about upcoming hurricanes, evacuation notices, safety tips, and emergency resources. Don't miss out on critical information – stay safe and prepared!</div>
                 </div>
                 <div className='col-sm-12 col-md-5 align-middle' style={{ display: 'flex', gap: '25px', alignItems: 'center', justifyContent: 'center' }}>
                     <div>
