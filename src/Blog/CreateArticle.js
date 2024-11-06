@@ -10,7 +10,6 @@ import 'react-time-picker/dist/TimePicker.css'; // Import time picker CSS
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'; // Import Editor's CSS
 import axios from 'axios';
 import Nav from '../Components/Nav';
-import { getCurrentUser } from '../Auth/Auth';
 
 import { GrFormView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
@@ -25,6 +24,8 @@ const CreateArticle = () => {
     const [imagePreview, setImagePreview] = useState(null);
 
     const [checked, setChecked] = useState(false);
+
+    const { getCurrentUser } = require('../Auth/AuthContext');
 
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
     const [articleInfo, setArticleInfo] = useState({

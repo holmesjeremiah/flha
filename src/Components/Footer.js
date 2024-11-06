@@ -1,6 +1,6 @@
 import React from 'react';
-import { isLoggedIn } from '../Auth/Auth.js';
 function Footer() {
+    const { isLoggedIn } = require('../Auth/AuthContext');
     return (
         <footer className="footer" style={{ backgroundColor: '#D2D9DA', padding: '20px 0', textAlign: 'center' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
@@ -19,7 +19,7 @@ function Footer() {
                     </a>
                 </nav>
                 <a href="/auth/dashboard" style={{ color: 'black', textDecoration: 'none' }}>
-                    {isLoggedIn() ? 'Dashboard' : 'Login'}
+                    {isLoggedIn ? 'Dashboard' : 'Login'}
                 </a>
                 <p style={{ margin: 0, color: 'black' }}>&copy; {new Date().getFullYear()} Frontline Hurricane Awareness</p>
             </div>
