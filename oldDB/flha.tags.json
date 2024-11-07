@@ -1,0 +1,540 @@
+[{
+  "_id": {
+    "$oid": "6653bdf39e0ad47d740e54b2"
+  },
+  "tag": "welcome"
+},
+{
+  "_id": {
+    "$oid": "6653bdf79e0ad47d740e54b3"
+  },
+  "tag": "intro"
+},
+{
+  "_id": {
+    "$oid": "6653c2207a9a36bbe80920a3"
+  },
+  "tag": "June"
+},
+{
+  "_id": {
+    "$oid": "6653c3769e0ad47d740e54b4"
+  },
+  "tag": "summer"
+},
+{
+  "_id": {
+    "$oid": "66563efb5a64fac1f30aa1a2"
+  },
+  "tag": "Categories"
+},
+{
+  "_id": {
+    "$oid": "66563eff5a64fac1f30aa1a3"
+  },
+  "tag": "Guide"
+},
+{
+  "_id": {
+    "$oid": "6657337b00f48d43970beba2"
+  },
+  "tag": "Tropical waves"
+},
+{
+  "_id": {
+    "$oid": "6657337f00f48d43970beba3"
+  },
+  "tag": "2024"
+},
+{
+  "_id": {
+    "$oid": "66573388b1e5d0ed81040a22"
+  },
+  "tag": "NOAA"
+},
+{
+  "_id": {
+    "$oid": "66573394fb0c002d390ba6e2"
+  },
+  "tag": "Disaster readiness"
+},
+{
+  "_id": {
+    "$oid": "66573395fb0c002d390ba6e3"
+  },
+  "tag": "Storms"
+},
+{
+  "_id": {
+    "$oid": "6657355a4bf7e5da800151e2"
+  },
+  "tag": "Drought Relief Caribbean"
+},
+{
+  "_id": {
+    "$oid": "665735604bf7e5da800151e3"
+  },
+  "tag": "Tropical Wave Tracking"
+},
+{
+  "_id": {
+    "$oid": "6657426c1f24f7e11b062422"
+  },
+  "tag": "HurricanePreparedness"
+},
+{
+  "_id": {
+    "$oid": "665742b000f48d43970beba4"
+  },
+  "tag": "Rick Scott"
+},
+{
+  "_id": {
+    "$oid": "665742bcb1e5d0ed81040a23"
+  },
+  "tag": "SafetyFirst"
+},
+{
+  "_id": {
+    "$oid": "665742c44bf7e5da800151e4"
+  },
+  "tag": "BayAreaLeaders"
+},
+{
+  "_id": {
+    "$oid": "66574421fb0c002d390ba6e4"
+  },
+  "tag": "WeatherForecast"
+},
+{
+  "_id": {
+    "$oid": "6657442fb1e5d0ed81040a24"
+  },
+  "tag": "FloridaStormRisk"
+},
+{
+  "_id": {
+    "$oid": "665744354bf7e5da800151e5"
+  },
+  "tag": "AtlanticHurricanes"
+},
+{
+  "_id": {
+    "$oid": "6657443d54c3ae43ac0e5eb4"
+  },
+  "tag": "NHCPredictions"
+},
+{
+  "_id": {
+    "$oid": "66574f3566ff4301ed069112"
+  },
+  "tag": "HurricaneSeason"
+},
+{
+  "_id": {
+    "$oid": "66574f46501086962e034652"
+  },
+  "tag": "JuneStorms"
+},
+{
+  "_id": {
+    "$oid": "66574f56fb0c002d390ba6e5"
+  },
+  "tag": "GulfCoastImpact"
+},
+{
+  "_id": {
+    "$oid": "6658e605bbf67a5f030bef53"
+  },
+  "tag": "Hurricane Preparedness"
+},
+{
+  "_id": {
+    "$oid": "6658e60c50c99179b108d162"
+  },
+  "tag": "Evacuation Warnings"
+},
+{
+  "_id": {
+    "$oid": "6658e61c6085e1a8c4041472"
+  },
+  "tag": "Emergency Planning"
+},
+{
+  "_id": {
+    "$oid": "6658e6246085e1a8c4041473"
+  },
+  "tag": "Evacuations"
+},
+{
+  "_id": {
+    "$oid": "6658e62f6085e1a8c4041474"
+  },
+  "tag": "Florida Safety"
+},
+{
+  "_id": {
+    "$oid": "665911e4b14a19fc13005032"
+  },
+  "tag": "tag"
+},
+{
+  "_id": {
+    "$oid": "6659cdf1e7c3f9036b04c672"
+  },
+  "tag": "Sales Tax Holiday"
+},
+{
+  "_id": {
+    "$oid": "6659cdf7e7c3f9036b04c673"
+  },
+  "tag": "Disaster Supplies"
+},
+{
+  "_id": {
+    "$oid": "6659cdfce7c3f9036b04c674"
+  },
+  "tag": "Florida Emergency Management"
+},
+{
+  "_id": {
+    "$oid": "6659d03194ea3c6c8c00d252"
+  },
+  "tag": "Tropical Waves"
+},
+{
+  "_id": {
+    "$oid": "6659d039da5957ef0b0fefa2"
+  },
+  "tag": "Florida Weather"
+},
+{
+  "_id": {
+    "$oid": "6659d1857ce0a294b4058b53"
+  },
+  "tag": "Extreme Weather"
+},
+{
+  "_id": {
+    "$oid": "6659d18d7b09fb98fc00e672"
+  },
+  "tag": "Florida Evacuation Plans"
+},
+{
+  "_id": {
+    "$oid": "6659d196e7c3f9036b04c675"
+  },
+  "tag": "AI Forecasting"
+},
+{
+  "_id": {
+    "$oid": "6660a89d3c333da1c80ecbb2"
+  },
+  "tag": "HurricaneSeason2024"
+},
+{
+  "_id": {
+    "$oid": "6660a8a03c333da1c80ecbb3"
+  },
+  "tag": "TropicalWaves"
+},
+{
+  "_id": {
+    "$oid": "6660a8a53c333da1c80ecbb4"
+  },
+  "tag": "NHCUpdates"
+},
+{
+  "_id": {
+    "$oid": "6660a94d6b910e2bcc01ed52"
+  },
+  "tag": "TaxFreeHoliday"
+},
+{
+  "_id": {
+    "$oid": "6660a9516b910e2bcc01ed53"
+  },
+  "tag": "FloridaWeather"
+},
+{
+  "_id": {
+    "$oid": "6660aa409833b20353008da2"
+  },
+  "tag": "ClimateChange"
+},
+{
+  "_id": {
+    "$oid": "6660aa449833b20353008da3"
+  },
+  "tag": "MiamiResilience"
+},
+{
+  "_id": {
+    "$oid": "6660aa479833b20353008da4"
+  },
+  "tag": "ISeeChange"
+},
+{
+  "_id": {
+    "$oid": "6660aa4b9833b20353008da5"
+  },
+  "tag": "SmartCities"
+},
+{
+  "_id": {
+    "$oid": "6661d70b7ed2fb4d740857e2"
+  },
+  "tag": "South Florida"
+},
+{
+  "_id": {
+    "$oid": "6661d70f7ed2fb4d740857e3"
+  },
+  "tag": "rainy season"
+},
+{
+  "_id": {
+    "$oid": "6661d7137ed2fb4d740857e4"
+  },
+  "tag": "hurricane preparedness"
+},
+{
+  "_id": {
+    "$oid": "6661d8c6f7cfabc0b2027d82"
+  },
+  "tag": "TropicalDisturbances"
+},
+{
+  "_id": {
+    "$oid": "6661d8cbf7cfabc0b2027d83"
+  },
+  "tag": "StormIntensification"
+},
+{
+  "_id": {
+    "$oid": "6661d8cff7cfabc0b2027d84"
+  },
+  "tag": "HurricanePreparedness"
+},
+{
+  "_id": {
+    "$oid": "6661da1f165fe9cffa0bec62"
+  },
+  "tag": "TreeTrimmingTips"
+},
+{
+  "_id": {
+    "$oid": "6661da257ed2fb4d740857e5"
+  },
+  "tag": "StormSafeLandscaping"
+},
+{
+  "_id": {
+    "$oid": "6667665d57bcc9d0d80a9b53"
+  },
+  "tag": "BipartisanEffort"
+},
+{
+  "_id": {
+    "$oid": "6667666057bcc9d0d80a9b54"
+  },
+  "tag": "DisasterResponse"
+},
+{
+  "_id": {
+    "$oid": "6667666357bcc9d0d80a9b55"
+  },
+  "tag": "FEMA"
+},
+{
+  "_id": {
+    "$oid": "6667666857bcc9d0d80a9b56"
+  },
+  "tag": "ClimateChange"
+},
+{
+  "_id": {
+    "$oid": "66676c0d595dca9988098552"
+  },
+  "tag": "FloridaHurricaneRisk"
+},
+{
+  "_id": {
+    "$oid": "66676c1457bcc9d0d80a9b57"
+  },
+  "tag": "EmergencyPlanning"
+},
+{
+  "_id": {
+    "$oid": "66676c1af228491b5608e6b2"
+  },
+  "tag": "StormDamagePrevention"
+},
+{
+  "_id": {
+    "$oid": "666848eec495e3f6700d4102"
+  },
+  "tag": "HurricanePreparedness"
+},
+{
+  "_id": {
+    "$oid": "666848f1c495e3f6700d4103"
+  },
+  "tag": "EmergencyKit"
+},
+{
+  "_id": {
+    "$oid": "666848f4c495e3f6700d4104"
+  },
+  "tag": "StormSafety"
+},
+{
+  "_id": {
+    "$oid": "666848f7c495e3f6700d4105"
+  },
+  "tag": "DisasterPreparation"
+},
+{
+  "_id": {
+    "$oid": "66688157b005f0feeb036782"
+  },
+  "tag": "SouthFloridaWeather"
+},
+{
+  "_id": {
+    "$oid": "6668815eb005f0feeb036783"
+  },
+  "tag": "FloodRisk"
+},
+{
+  "_id": {
+    "$oid": "6668816938cdd38f76045c82"
+  },
+  "tag": "TropicalMoisture"
+},
+{
+  "_id": {
+    "$oid": "6668816e38cdd38f76045c83"
+  },
+  "tag": "National Hurricane Center"
+},
+{
+  "_id": {
+    "$oid": "6668817938cdd38f76045c84"
+  },
+  "tag": "NationalHurricaneCenter"
+},
+{
+  "_id": {
+    "$oid": "6668818038cdd38f76045c85"
+  },
+  "tag": "ClimateImpact"
+},
+{
+  "_id": {
+    "$oid": "66688253b005f0feeb036784"
+  },
+  "tag": "TropicalDownpours"
+},
+{
+  "_id": {
+    "$oid": "66688256b005f0feeb036785"
+  },
+  "tag": "FloodingPotential"
+},
+{
+  "_id": {
+    "$oid": "6668825ab005f0feeb036786"
+  },
+  "tag": "DroughtRelief"
+},
+{
+  "_id": {
+    "$oid": "6668825eb005f0feeb036787"
+  },
+  "tag": "ScorchingTemperatures"
+},
+{
+  "_id": {
+    "$oid": "6668850738cdd38f76045c86"
+  },
+  "tag": "EmergencyManagement"
+},
+{
+  "_id": {
+    "$oid": "6668850b38cdd38f76045c87"
+  },
+  "tag": "CommunityEngagement"
+},
+{
+  "_id": {
+    "$oid": "6668850e38cdd38f76045c88"
+  },
+  "tag": "StormSeasonReadiness"
+},
+{
+  "_id": {
+    "$oid": "6668851338cdd38f76045c89"
+  },
+  "tag": "ExpertPanelDiscussion"
+},
+{
+  "_id": {
+    "$oid": "666af6cf163948bcc700af02"
+  },
+  "tag": "FloodPreparedness"
+},
+{
+  "_id": {
+    "$oid": "666af6d2163948bcc700af03"
+  },
+  "tag": "EmergencyResponse"
+},
+{
+  "_id": {
+    "$oid": "666af6dd163948bcc700af04"
+  },
+  "tag": "Flooding"
+},
+{
+  "_id": {
+    "$oid": "666af6e1163948bcc700af05"
+  },
+  "tag": "TropicalStormUpdates"
+},
+{
+  "_id": {
+    "$oid": "666af8cd2dae86da9c088322"
+  },
+  "tag": "Invest90L"
+},
+{
+  "_id": {
+    "$oid": "666af8d30b8ea9a5790ccb32"
+  },
+  "tag": "FloodingAlert"
+},
+{
+  "_id": {
+    "$oid": "666af8da730a27fbf40099e2"
+  },
+  "tag": "TropicalDisturbance"
+},
+{
+  "_id": {
+    "$oid": "66703813f26ed57ac5070142"
+  },
+  "tag": "FloridaHurricane2024"
+},
+{
+  "_id": {
+    "$oid": "66703816f26ed57ac5070143"
+  },
+  "tag": "TropicalStormWarning"
+},
+{
+  "_id": {
+    "$oid": "667038208e438d64a30b4832"
+  },
+  "tag": "WeatherUpdate"
+}]

@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "666898b6f5faa0bd4f080242"
+  },
+  "phone": "8169203959",
+  "password": "$2y$12$vCWtryJKk4fQXOH0ZeDA9ul9E8gYSwWBk73hqWrExC8yRNSSgxw4O",
+  "username": "jlholmes",
+  "level": "admin"
+},
+{
+  "_id": {
+    "$oid": "66689ecbc8fd3e3d0b053c22"
+  },
+  "phone": "8169203955",
+  "password": "$2y$12$10MpyxmWbIQEHKbPjm/VmOR/PJjZfVO4C0k75hMQoRWl91UziY.wG",
+  "username": "frogman",
+  "level": "user"
+}]
