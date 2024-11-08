@@ -19,6 +19,7 @@ import { LuArrowDownLeftFromCircle } from "react-icons/lu";
 
 import { chaoticOrbit } from 'ldrs';
 import Footer from '../Components/Footer';
+import { getCurrentUser } from 'auth-library';
 
 
 
@@ -31,7 +32,7 @@ const CreateMedia = () => {
 
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
 
-    const { getCurrentUser } = require('../Auth/AuthContext');
+    const { userEmail } = useContext(AuthContext);
     const [mediaInfo, setArticleInfo] = useState({
         caption: "",
         publication: {

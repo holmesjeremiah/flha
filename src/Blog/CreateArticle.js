@@ -15,7 +15,7 @@ import { GrFormView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
 
 import Footer from '../Components/Footer';
-
+import { useAuth } from 'avacan-auth';
 
 
 const CreateArticle = () => {
@@ -25,7 +25,9 @@ const CreateArticle = () => {
 
     const [checked, setChecked] = useState(false);
 
-    const { getCurrentUser } = require('../Auth/AuthContext');
+    const { userEmail } = useAuth();
+
+
 
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
     const [articleInfo, setArticleInfo] = useState({
