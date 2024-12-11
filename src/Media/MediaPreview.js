@@ -31,8 +31,10 @@ const MediaPreview = () => {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
-            let media = response.data.objects;
+            //const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
+            const response = await axios.get('/db/flha.media.json');
+
+            let media = response;
 
             setAllPosts(sortArticles(media));
 

@@ -27,7 +27,19 @@ const Article = ({ params }) => {
             //const response = await axios.get(process.env.REACT_APP_API_URL + 'articles/' + articleId);
             const response = await fetch('/db/flha.articles.json')
 
-            setArticle();
+
+            // iterate through the articles and find the one with the matching id
+            /*
+            [{
+                "_id": {
+                    "$oid": "6653be4d7a9a36bbe80920a2"
+                },
+            */
+            
+            let articles = response;
+            let article = articles.find(article => article._id.$oid === articleId);
+
+            setArticle(article);
 
             /*
             setTimeout(function () {

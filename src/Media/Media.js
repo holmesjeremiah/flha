@@ -13,7 +13,6 @@ import MediaCard from './MediaCard';
 const Media = ({ }) => {
     const [medias, setMedias] = useState([]);
     const [sortBy, setSortBy] = useState('Latest');
-    const [searchQuery, setSearchQuery] = useState('');
 
     helix.register()
 
@@ -21,7 +20,9 @@ const Media = ({ }) => {
     const fetchArticles = async () => {
         try {
             //const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
-            const response = fetch('/flha.media.json')
+            const response = await fetch('/flha.media.json')
+
+            
                 
             
             let media = sortArticles('Latest', response);

@@ -20,11 +20,12 @@ const Blog = ({ }) => {
 
     const fetchArticles = async () => {
         try {
-            const response = await axios.get(process.env.REACT_APP_API_URL + 'articles');
-            let articles = sortArticles('Latest', response.data.objects);
-            //if (filterBy) {
-            //  articles = filterArticles(filterBy, articles)
-            //}
+            //const response = await axios.get(process.env.REACT_APP_API_URL + 'articles');
+            //let articles = sortArticles('Latest', response.data.objects);
+            
+            const response = await fetch('/flha.media.json')
+            let articles = response;
+
 
             setArticles(articles);
 
