@@ -31,11 +31,11 @@ const CreateMedia = () => {
 
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
 
-    const { userEmail } = useContext(AuthContext);
+    //const { userEmail } = useContext(AuthContext);
     const [mediaInfo, setArticleInfo] = useState({
         caption: "",
         publication: {
-            author: getCurrentUser().username,
+            //author: getCurrentUser().username,
             date: new Date(),
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) // Set default time to current time
         },

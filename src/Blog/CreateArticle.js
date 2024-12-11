@@ -258,7 +258,7 @@ const CreateArticle = () => {
                                             title: "",
                                             description: "",
                                             publication: {
-                                                author: getCurrentUser().username,
+                                                //author: getCurrentUser().username,
                                                 date: new Date(),
                                                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) // Set default time to current time
                                             },
