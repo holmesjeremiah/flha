@@ -15,7 +15,6 @@ import { GrFormView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
 
 import Footer from '../Components/Footer';
-import { useAuth } from 'avacan-auth';
 
 
 const CreateArticle = () => {
@@ -25,7 +24,7 @@ const CreateArticle = () => {
 
     const [checked, setChecked] = useState(false);
 
-    const { userEmail } = useAuth();
+    //const { userEmail } = useAuth();
 
 
 
@@ -34,7 +33,7 @@ const CreateArticle = () => {
         title: "",
         description: "",
         publication: {
-            author: getCurrentUser().username,
+            //author: getCurrentUser().username,
             date: new Date(),
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) // Set default time to current time
         },
