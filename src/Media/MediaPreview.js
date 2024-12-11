@@ -15,7 +15,6 @@ const MediaPreview = () => {
     const nextPost = () => {
         if (currentPost === 0) {
             return;
-
         }
         setCurrentPost(currentPost - 1)
     };
@@ -85,7 +84,7 @@ const MediaPreview = () => {
                                     )
                                     :
                                     <img
-                                        src={'https://api.jeremiah.business' + allPosts[currentPost].image}
+                                        src={'/logo.png'}
                                         alt="Article Image"
                                         className="" // Bootstrap class for responsive images
                                         style={{ objectFit: 'cover', width: '100%', borderRadius: '5px', }}
@@ -94,7 +93,7 @@ const MediaPreview = () => {
                         </div>
                         <div className="text-center col-sm-12 col-md-5">
 
-                            <div style={{}}>
+                            <div>
 
                                 <p>
                                     <h1 className="display-4 font-italic">{allPosts[currentPost].title}</h1>

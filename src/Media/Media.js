@@ -20,8 +20,12 @@ const Media = ({ }) => {
 
     const fetchArticles = async () => {
         try {
-            const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
-            let media = sortArticles('Latest', response.data.objects);
+            //const response = await axios.get(process.env.REACT_APP_API_URL + 'media');
+            const response = fetch('/flha.media.json')
+                
+            
+            let media = sortArticles('Latest', response);
+            
             //if (filterBy) {
             //  medias = filterArticles(filterBy, medias)
             //}

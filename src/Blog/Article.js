@@ -24,18 +24,23 @@ const Article = ({ params }) => {
     // Function to fetch an article
     const fetchArticle = async () => {
         try {
-            const response = await axios.get(process.env.REACT_APP_API_URL + 'articles/' + articleId);
-            setArticle(response.data.object);
+            //const response = await axios.get(process.env.REACT_APP_API_URL + 'articles/' + articleId);
+            const response = await fetch('/db/flha.articles.json')
 
+            setArticle();
+
+            /*
             setTimeout(function () {
-                countView(response.data.object.views);
+                countView(response.data.views);
             }, 5000);
+            */
         } catch (error) {
             console.error('Error fetching articles:', error);
         }
     };
 
     // Function to count view
+    /*
     const countView = async (views) => {
         try {
             await axios.put(
@@ -54,6 +59,7 @@ const Article = ({ params }) => {
             console.error('Error counting view:', error);
         }
     };
+    */
 
     // Function to share
     const share = (url) => {
@@ -101,7 +107,7 @@ const Article = ({ params }) => {
                     ) : (
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <img
-                                src={'https://api.jeremiah.business' + article.image}
+                                src={'/logo.png'}
                                 alt="Article Image"
                                 className="img-fluid"
                                 style={{ borderBottom: '2px solid #84B7D3', margin: '25px', maxHeight: '500px' }}

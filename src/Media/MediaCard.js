@@ -11,8 +11,11 @@ function MediaCard({ articleInfo }) {
     return (
         <div class="card" style={{ backgroundColor: '', border: '1px solid #D3D7DC', borderRadius: '10px' }}>
             {
+                /*
                 articleInfo.image
                 && <img class="card-img-top" src={'https://api.jeremiah.business' + articleInfo.image} alt="Card image cap" style={{ height: '400px', objectFit: 'cover', borderBottom: '2px solid #84B7D3', borderRadius: '10px' }} />
+                */
+                <img class="card-img-top" src={'/logo.png'} alt="Card image cap" style={{ height: '400px', objectFit: 'cover', borderBottom: '2px solid #84B7D3', borderRadius: '10px' }} />
             }
             {
                 articleInfo.youtubeUrl && (
