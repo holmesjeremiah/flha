@@ -19,7 +19,6 @@ import { LuArrowDownLeftFromCircle } from "react-icons/lu";
 
 import { chaoticOrbit } from 'ldrs';
 import Footer from '../Components/Footer';
-import { getCurrentUser } from 'auth-library';
 
 
 
@@ -290,7 +289,7 @@ const CreateMedia = () => {
                                             title: "",
                                             description: "",
                                             publication: {
-                                                author: getCurrentUser().username,
+                                                //author: getCurrentUser().username,
                                                 date: new Date(),
                                                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) // Set default time to current time
                                             },

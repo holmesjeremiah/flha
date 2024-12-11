@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom
 import HomePage from './HomePage';
 import Blog from './Blog/Blog';
 import CreateArticle from './Blog/CreateArticle';
-import { LoginForm, RegisterForm } from 'auth-library';
+//import { LoginForm, RegisterForm } from 'auth-library';
 import Article from './Blog/Article';
 import AboutUs from './AboutUs';
 import SafetyTips from './SafetyTips';
@@ -21,10 +21,10 @@ const App = () => {
         <Route exact path="/SafetyTips" element={<SafetyTips />} />
         <Route exact path="/Resources" element={<Resources />} />
 
-
+        { /*
         <Route exact path="/auth/login" element={<LoginForm />} />
         <Route exact path="/auth/register" element={<Register />} />
-
+        */ }
         <Route exact path="/media" element={<Media />} />
         <Route exact path="/media/create" element={<CreateMedia />} />
 

@@ -3,20 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ConfigProvider, AuthProvider } from 'auth-library';
-
-// Define your app configuration variables
-const appName = "flha"; // Replace with your actual app name
-const apiUrl = "https://mongapi.avacan.net/"; // Replace with your actual API URL
+// No need to import ConfigProvider or AuthProvider
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ConfigProvider appName={appName} apiUrl={apiUrl}> {/* Wrap with ConfigProvider if using it */}
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </ConfigProvider>
+    <App />
   </React.StrictMode>
 );
 
